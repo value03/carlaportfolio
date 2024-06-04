@@ -7,7 +7,7 @@ $(document).ready(function () {
       $(data)
         .find("a")
         .attr("href", function (i, val) {
-          if (val.match(/\.(jpe?g|png|gif)$/)) {
+          if (val.match(/\.(jpg|png|gif)$/)) {
             $(".space").append(
               "<img src='" + folder + val + "' class='komet'/>",
             );
