@@ -1,0 +1,52 @@
+html,
+body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.space {
+    position: relative;
+    /*overflow: hidden;*/
+    background-color: #000;
+    height: 80%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    padding: 1px;
+    border: 1px;
+}
+
+.komet {
+    opacity: 1;
+    position: absolute;
+}
+
+.komet.hidden {
+    opacity: 0;
+    transition: opacity 5s linear;
+}
+
+.trans {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+}
+
+/*.swirl {
+    height: 100vh;
+    position: relative;
+    top: 100px;
+    left: -20px;
+
+    animation-name: imageSlide;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+*/
