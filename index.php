@@ -10,17 +10,10 @@
 
     <body>
         <section class="space" id="spacee">
-            <?php
-	    echo '<script>console.log("hello")</script>';
-            $dir = '/assets';
-            $files = scandir($dir);
-            foreach($files as $image) {
-                    echo '<img src="assets/"' . $image . ' class="komet" id="' . $image . '" />';
-		    echo "<script>console.log('$image')</script>";
-                }
-            ?>
+
         </section>
-        <!--<section class="navigation">
+
+        <!--<section class="navigation">ehheheheh
             <button class="button">CARLA AMARCA</button>
             </section>-->
 

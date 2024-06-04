@@ -1,3 +1,22 @@
+var folder = "assets/";
+
+$(document).ready(function () {
+  $.ajax({
+    url: folder,
+    success: function (data) {
+      $(data)
+        .find("a")
+        .attr("href", function (i, val) {
+          if (val.match(/\.(jpe?g|png|gif)$/)) {
+            $(".space").append(
+              "<img src='" + folder + val + "' class='komet'/>",
+            );
+          }
+        });
+    },
+  });
+});
+
 $(document).ready(function () {
   $("img.komet").each(function () {
     var $komet = $(this);
