@@ -9,16 +9,10 @@ body {
 
 .space {
     position: relative;
-    /*overflow: hidden;*/
+    overflow: hidden;
     background-color: #000;
-    height: 80%;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 5%;
-    margin-bottom: 10%;
-    padding: 1px;
-    border: 1px;
+    height: 100%;
+    width: 100%;
 }
 
 .komet {
@@ -31,22 +25,38 @@ body {
     transition: opacity 5s linear;
 }
 
-.trans {
-    visibility: hidden;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 10px;
+.text {
+    opacity: 0;
+    color: red;
+    text-align: center;
 }
 
-/*.swirl {
-    height: 100vh;
-    position: relative;
-    top: 100px;
-    left: -20px;
-
-    animation-name: imageSlide;
-    animation-duration: 10s;
-    animation-timing-function: linear;
+.text.shown {
+    opacity: 1;
+    transition: opacity 7s linear;
+    animation-delay: 5s;
 }
-*/
+
+.komet.inflight {
+    animation: kometFlight 10s linear;
+}
+
+.komet.popUp {
+    transform: translateX(0);
+    will-change: transform;
+    animation: kometPopup 5s forwards;
+    animation-delay: 5s;
+}
+
+@keyframes kometFlight {
+    to {
+        left: calc(100% + 20px);
+    }
+}
+
+@keyframes kometPopup {
+    to {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
