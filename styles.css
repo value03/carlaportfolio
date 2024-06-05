@@ -18,6 +18,7 @@ body {
 .komet {
     opacity: 1;
     position: absolute;
+    transition: opacity 5s linear;
 }
 
 .komet.hidden {
@@ -29,6 +30,7 @@ body {
     opacity: 0;
     color: red;
     text-align: center;
+    transition: opacity 7s linear;
 }
 
 .text.shown {
@@ -59,4 +61,10 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+}
+
+.notransition {
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
 }
