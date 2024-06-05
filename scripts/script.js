@@ -77,7 +77,7 @@ function onKometLoad() {
 $(document).ready(function () {
   $.ajax({
     url: folder,
-    success: function (data) {
+    always: function (data) {
       $(data)
         .find("a")
         .attr("href", function (i, val) {
